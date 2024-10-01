@@ -7,10 +7,11 @@ import pandas as pd
 app = Flask(__name__)
 
 # Step 2: Load the trained model and metadata
-with open('https://github.com/Salonii2/a1-backend/blob/169eb132f0cf590985b2a96026971b2ada9eae1b/best_model.pkl', 'rb') as model_file:
+# with open('https://github.com/Salonii2/a1-backend/blob/169eb132f0cf590985b2a96026971b2ada9eae1b/best_model.pkl', 'rb') as model_file:
+with open('best_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
-with open('https://github.com/Salonii2/a1-backend/blob/169eb132f0cf590985b2a96026971b2ada9eae1b/model_metadata.json', 'r') as json_file:
+with open('model_metadata.json', 'r') as json_file:
     model_metadata = json.load(json_file)
 
 expected_features = ['Height (ft)', 'Width (ft)', 'Material', 'Location', 'Use_Case', 
