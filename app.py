@@ -7,10 +7,10 @@ import pandas as pd
 app = Flask(__name__)
 
 # Step 2: Load the trained model and metadata
-with open('C:\\Users\\SALONI SHARMA\\OneDrive\\Documents\\CU DOC\\gate ml\\best_model.pkl', 'rb') as model_file:
+with open('best_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
-with open('C:\\Users\\SALONI SHARMA\\OneDrive\\Documents\\CU DOC\\gate ml\\model_metadata.json', 'r') as json_file:
+with open('model_metadata.json', 'r') as json_file:
     model_metadata = json.load(json_file)
 
 expected_features = ['Height (ft)', 'Width (ft)', 'Material', 'Location', 'Use_Case', 
